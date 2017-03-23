@@ -5,7 +5,6 @@ using namespace std;
 
 
 
-
 int main()
 {
     const int MaxSize = 3;
