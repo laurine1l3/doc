@@ -2,9 +2,7 @@
  
  CIS 22B
  Lab2: [This program reads a file containing movie data (Tile, Director, Genre, Year Released, Running Time) into a vector of structures. This program will also reads the content of the file, sort the data and prints it on the screen]
- 
- Author: [Lok Yin Cheng]
- Date:[2017-01-26]
+
  *************************************************************/
 
 #include <iostream>
