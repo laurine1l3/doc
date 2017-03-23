@@ -1,52 +1,33 @@
+//
+//  main.cpp
+//  Lab5
+//
+//  Created by Cheng, Laurine(AWF) on 3/5/17.
+//  Copyright © 2017 Cheng, Laurine(AWF). All rights reserved.
+//
+
 #include <iostream>
-#include "magicSquare.h"
+#include "Checking.h"
+#include "Savings.h"
 
 using namespace std;
 
+int main(){
+    
+    Checking checkAcct(1000,3,0.2);
+    Savings saveAcct(2000);
+    
+    saveAcct.withdraw(100);
+    checkAcct.withdraw(150);
+    //checkAcct.deposit(100);
+    //checkAcct.withdraw(10);
+    //checkAcct.applyCharges();
 
-
-int main()
-{
-    const int MaxSize = 3;
-    //int ROW, COLUMN = 0;
-    int square[MaxSize][MaxSize]; 
     
-    intputSquare(square, MaxSize);
     
-    bool isMagicSquare = checkMagicSquare(& square[0][0], MaxSize);
+    checkAcct.printMonthlyStatement();
     
-    printSquare(square, MaxSize);
-    
-    DisplayResult(isMagicSquare);
-    
-
-    return 0;
+    saveAcct.printMonthlyStatement();
     
 }
-
-
-/** This is the output
-
- 
- Enter matrix :
- 4
- 9
- 2
- 3
- 5
- 7
- 8
- 1
- 6
- 
- Entered matrix is :
- 
-	4	9	2
- 
-	3	5	7
- 
-	8	1	6
- This is a Magic square
- Program ended with exit code: 0
-**/
 
