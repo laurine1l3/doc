@@ -3,8 +3,6 @@
  CIS 22B
  HW3: [Design a class called Date. The class should store a date in three integers: month, day, and year. Date will be printed in different following formats by member functions:]
  
- Author: [Lok Yin Cheng]
- Date:[2017-01-26]
  *************************************************************/
 
 #include <iostream>
