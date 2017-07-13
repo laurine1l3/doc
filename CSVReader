@@ -1,0 +1,76 @@
+package cellularData;
+
+import java.io.*;
+import java.util.Scanner;
+/**
+ * Created by lokcheng on 7/11/17.
+ */
+
+public class CSVReader {
+
+//    String countryNames;
+//    String[] country;
+//    int yearLabels;
+//    int[] yearNum;
+//    double cellularDataTable;
+//    double[][] tables;
+//    Scanner scan;
+
+    //String countryNames;
+    String[] countryNames;
+    int yearLabels;
+    int[] yearNum;
+    double cellularDataTable;
+    double[][] tables;
+    Scanner scan;
+
+    public CSVReader(String file) throws IOException
+    {
+        File data = new File(file);
+        throw new FileNotFoundException("File doest not exist");
+
+        String countryNames="";
+
+        scan = new Scanner(file);
+        scan.nextLine();
+        while(scan.hasNextLine()) {
+            final String input = scan.nextLine(); // read the line after the check (to make sure there is a line available)
+            String[] countryNames = input.split(",");
+            //int a = Integer.parseInt(countryNames[1]);
+            System.out.println(countryNames[0]);
+            //System.out.println(a);
+        }
+
+
+//        File file = new File(filename);
+//        try{
+//            String input="";
+//            scan = new Scanner(file);
+//            scan.nextLine();
+//            while((input=scan.nextLine())!=null)
+//            {
+//                String[] countryNames = input.split(",");
+//                //int a = Integer.parseInt(countryNames[1]);
+//                System.out.println(countryNames[0]);
+//                //System.out.println(a);
+//            }
+//            scan.close();
+//        }
+//        catch(FileNotFoundException e)
+//        {
+//            System.out.println(e);
+//        }
+    }
+    public String getCountryNames()
+    {
+        return countryNames;
+    }
+    public int getYearLabels()
+    {
+        return yearLabels;
+    }
+    public double getParsedTable()
+    {
+        return cellularDataTable;
+    }
+}
